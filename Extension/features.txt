@@ -1,0 +1,67 @@
+Number of text/plain sections
+Number of text/html sections
+Number of image sections
+Number of application sections
+Ratio of text/plain to any text sections
+Length of texts in text/html section
+Number of standard headers
+Number of In-Reply-To entities
+Number of Received entities
+Existence of User-Agent
+Existence of-mailer
+MIME version of the first section
+Case variance in MIME-Version header tag
+Length of Message-ID
+ASCII number of Message-ID boundary character (if any)
+Existence of the domain of Message-ID (if any) in ID part
+Is ID part hexadecimal (except the special characters)
+Is ID part decimal (except the special characters)
+Existence of dots in ID part
+Existence of special characters in ID part
+Is domain part hexadecimal (except the special characters)
+Is domain part decimal (except the special characters)
+Existence of dots in domain part
+Existence of special characters other than dots in domain part
+Number of From header tags in the mail thread
+Number of To header tags in the mail thread
+Number of unique To addresses in the mail thread
+Number of unique Reply-To addresses in the mail thread
+Number of unique domains in all email addresses
+Ratio of unique To domains to the unique domains in all email addresses
+Number of Cc addresses
+Number of Bcc addresses
+Number of Sender addresses
+Is Return-Path addresses identical to Reply-To addresses
+Number of To domains identical to From domain
+Number of Cc domains identical to From domain
+Number of Bcc domains identical to From domain
+Is From domain same to Reply-To domain
+Is From domain same to Return-Path domain
+Is From entity bracketed
+Is To entity bracketed
+Length of the first boundary ID
+Does the first boundary ID start with an equal symbol (=)
+Existence of equal symbols (=) in the middle of the first boundary ID
+Existence of underscores in the first boundary ID
+Existence of dots in the first boundary ID
+Existence of the other special characters in the first boundary ID
+Is the first boundary ID hexadecimal (except the special characters)
+Is the first boundary ID decimal (except the special characters)
+Index of charset in the first section
+Number of unique charset in all the sections
+Length of <style> bodies and inline style bodies
+Existence of direction: rtl style for backward rendering
+Existence of inline <script>
+Depth of DOM object tree
+Number of DOM leaf nodes
+Number of unique DOM leaf node types
+Mean of DOM leaf node depths
+Standard deviation of DOM leaf node depths
+Number of email addresses in text/html section
+Number of <a href> and <a data-saferedirecturl> tags
+Number of URLs in text/html section
+Ratio of unique domains to the domains of all URLs in any tags
+
+
+
+We use a CNN-LSTM architecture for this module, wherein the convolution layer extracts local features, while LSTM focuses on learning the long-term sequential dependency from the encoded characters. For pooling between the convolution layers, we use MaxPooling. We place a dense layer with multiple dense units after LSTM to aggregate the outputs from LSTM units (e.g., from 512 LSTM units to 256 dense units), and use another dense layer with a single unit to make a single output value representing the prediction probability. The network returns predicted probability for each individual URL. For obtaining a prediction value for an email with multiple URLs, we take the highest prediction probability of all embedded URLs in the email. The rationale for this is, presence of one phishing URL is sufficient to classify a mail as a phishing attempt.

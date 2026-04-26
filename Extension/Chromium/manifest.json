@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Mail Assure",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "assets/icon.png"
+    }
+  },
+  "oauth2": {
+    "client_id": "507048108049-1l0639uk0nuqv784gi53qhrof2qf0rnf.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ]
+  },
+  "permissions": [
+    "identity",
+    "storage"
+  ],
+  "icons": {
+    "48": "assets/icon.png"
+  }
+}

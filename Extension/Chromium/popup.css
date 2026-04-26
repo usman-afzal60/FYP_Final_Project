@@ -1,0 +1,55 @@
+body {
+  width: 300px;
+  height: 435px;
+  background-color: #0f6c7b;
+  color: white;
+}
+.email-list {
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: 1px solid #ccc;
+}
+.email-item {
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+.email-item.selected {
+  background-color: #f0f0f0;
+}
+#upper-div{
+  padding: 0px 20px 5px;
+  display: flex;
+  justify-content: space-around;
+}
+#upper-right-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#sign_out, #authorize{
+  margin-bottom: 5%;
+  margin-right: -60%;
+}
+h1{
+  text-align: center;
+}
+button{
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 7px;
+}
+#lower-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+  padding: 10px;
+}
+
+#overlay h2{
+  margin: auto;
+}
